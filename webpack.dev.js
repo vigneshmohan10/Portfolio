@@ -7,6 +7,6 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: "[name].js",
   },
 });
