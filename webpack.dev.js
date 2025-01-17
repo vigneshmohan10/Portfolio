@@ -9,4 +9,15 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader", // inject css into the DOM
+          "css-loader", // Turn css into common js
+        ],
+      },
+    ],
+  },
 });
